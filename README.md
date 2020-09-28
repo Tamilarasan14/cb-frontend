@@ -114,7 +114,7 @@ npm start
 
 1.	From VSCode open Terminal -> New Terminal.
 1.	 Run the command:
-npm start
+			npm start
 1.	When npm start completes, your default browser should open to [AP Front End](http://localhost:3000) displaying the home page of Kite Administrator Portal.
 1.	Click the Health Check link.
 1.	Server is DOWN is displayed. ![Server Down Screenshot](/README/ServerDown.png)
