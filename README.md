@@ -1,68 +1,127 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**1.	Introduction**
 
-## Available Scripts
+This document has a step by step approach for setting up the required software also the code which should be running it in the local environment by using Eclipse or VSCode.
 
-In the project directory, you can run:
+**2.	Installing sotware and configuring environment variable**
 
-### `yarn start`
+*2.1.	Installing NodeJS and NPM* (Same steps as ap-backend)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Install nodejs and npm from
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+	https://nodejs.org/en/download/
+	
+Download Windows Installer (.msi) 64bit.
 
-### `yarn test`
+NodeJS version 13.11.0 and NPM version 6.13.7 were used for the initial setup of the project.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**3.	Installing the  IDE and pulling code from Git**
 
-### `yarn build`
+The developer can choose and use anyone of the below IDE to set up the local environment.
+1. Eclipse
+1. VSCode
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**3.1.	Code Setup using Eclipse**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+We can use any version of Eclipse. Download Eclipse from
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+	http://www.eclipse.org/downloads/
+	
+Choose a mirror close to you and download from there and install it.
 
-### `yarn eject`
+	eclipse-inst-win64.exe
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*3.1.2.	Pulling Projects from GITHUB* (Very similar steps as ap-backend except the last one)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To get the Kite Administrator Portal front end project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1.	Start Eclipse and create a workspace file in your preferred local directory (ex. C:\AP\ap-frontend) ![Front End Eclipse Workspace Screenshot](/README/FrontEndEclipseWorkspace.png)
+1.	 Open the Git perspective.
+From Eclipse open Window -> Perspective -> Open Perspective -> Other.. -> Git
+1.	In the Git - Select Repositories source.
+Click on "Clone a Git Repository" 
+1.	Select Clone URI for import from Github.
+1.	In the Source Git Repository, copy paste URI https://github.com/kiteaai/ap-frontend .
+1.	Provide your Github user and password if it is not there by default and click Next 
+1.	Once the project branch appears in the Git Repositories window, choose the required branch (ex. development) and click next.  ![Front End Clone Location Screenshot](/README/FrontEndCloneLocation.png)
+1.	Provide a local Destination directory for checkout (ex. C:\AP\ap-frontend-source) and click Finish 
+1.	Open a command prompt window and navigate to  the source directory (ex. C:\AP\ap-frontend-source)
+1.	Execute the following commands to install
 
-## Learn More
+npm install --global react-scripts 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**3.2.	Code Setup using VSCode**
 
-### Code Splitting
+*3.2.1.    Installing Visual Studio Code*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+We can use any version of Visual Studio Code. Download and Install Visual Studio Code from
+	
+	https://code.visualstudio.com/Download
 
-### Analyzing the Bundle Size
+*3.2.2.    Installing Git*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Download and Install Git from
+	
+	https://git-scm.com/downloads
 
-### Making a Progressive Web App
+*3.2.3.    Installing Git plugin in VSCode*
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1.	Open VSCode.
+1.	To Install the Git plugin for VSCode. From VSCode open View-> Extensions-> Type Git in search  -> Install GitHub.
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+*3.2.4.    Pulling Projects from GITHUB* 
 
-### Deployment
+To get the Content Builder front end project
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+1.	Open VSCode.
+1.	Open the Git perspective. From VSCode open View-> SCM 
+1.	In the Git - Click on Clone Repository.
+![Front End VSCode Workspace Screenshot](/README/VSCodeClone.png)
+1.	In the Provide Git Repository URI , copy paste URI https://github.com/kiteaai/ap-frontend.
+1.	Provide your Github user and password if it is not there by default and click Enter.
+1.	If the Authorize GitHub for VSCode appears in the Browser Click Authorize github and confirm password.
+1.	Provide a local Destination directory for checkout (ex. C:\AP\ap-frontend) and click Finish.
+1.	Open Cloned Repository by clicking Open in button in dialog box.
+![Front End VSCode Cloned Repository Screenshot](/README/VSCodeOpenClonedRepository.png)
+1.	To Switch the required branch (ex. development) click the bottom-left corner existing branch name and select from the drop down.
+![Front End VSCode Switch Branch Screenshot](/README/VSCodeSwitchBranch.png)
+1.	To Open a command prompt window. From VSCode open View -> Integrated Terminal.
+![Front End VSCode Toggle Terminal Screenshot](/README/VSCodeToggleTerminal.png)
+1.	Execute the following commands to install
+	
+	npm install --global react-scripts
+	
+	npm install
 
-### `yarn build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**4.	Running the projects**
+
+**4.1. Starting the ap-frontend project from Eclipse.**
+
+1.	Open a command prompt and navigate to the ap-frontend directory (ex. C:\AP\ap-frontend-source).
+1.	 Run the command:
+npm start
+1.	When npm start completes, your default browser should open to [AP Front End](http://localhost:3000) displaying the home page of Kite Administrator Portal.
+1.	Click the Health Check link.
+1.	Server is DOWN is displayed. ![Server Down Screenshot](/README/ServerDown.png)
+1.	See ap-backend project for bringing up backend server.
+1.	Once the backend project is up, the health check should show it is up.  ![Server Down Screenshot](/README/ServerUp.png)
+
+**4.2. Starting the ap-frontend project from VSCode.**
+
+1.	From VSCode open Terminal -> New Terminal.
+1.	 Run the command:
+npm start
+1.	When npm start completes, your default browser should open to [AP Front End](http://localhost:3000) displaying the home page of Kite Administrator Portal.
+1.	Click the Health Check link.
+1.	Server is DOWN is displayed. ![Server Down Screenshot](/README/ServerDown.png)
+1.	See ap-backend project for bringing up backend server.
+1.	Once the backend project is up, the health check should show it is up.  ![Server Down Screenshot](/README/ServerUp.png)
+
+**5.	What to do if you encounter problems** (Same steps as ap-backend)
+1.	XMLHttpRequest CORS policy 
+If this message occurs when trying to communicate to backend on local computer "XMLHttpRequest CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource"
+Then execute npm install cors-save
